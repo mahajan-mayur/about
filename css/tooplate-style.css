@@ -6,14 +6,30 @@ https://www.tooplate.com/view/2097-pop
 
 */
 
+
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
   font-weight: 300;
   color: white;
   position: relative;
+  background-image: url(../img/pop-bg.jpg);
 }
+.tm-main-content{
+  background-color: #FF0000; 
+  margin: 5% 18% 5% 18%;
 
+  box-shadow:
+  /* inset 0 0 50px rgb(0, 0, 0),
+  inset 20px 0 80px rgb(115, 255, 0),
+  inset -20px 0 80px #0ff,
+  inset 20px 0 300px #f0f,
+  inset -20px 0 300px #0ff, */
+  0 0 15px rgb(16, 99, 5),
+  -10px 0 40px rgb(226, 32, 226),
+  10px 0 40px #0ff;
+ 
+}
 h1 {
   font-size: 2.8rem;
 }
@@ -24,7 +40,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/pop-bg.jpg);
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -310,8 +326,9 @@ p {
 
 /* Footer */
 footer {
+
   position: absolute;
-  bottom: 30px;
+  bottom: 10px;
   text-align: center;
   left: 0;
   right: 0;
@@ -571,6 +588,7 @@ p:last-child {
     }
   }
 }
+
 
 
   
