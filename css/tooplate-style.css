@@ -6,47 +6,49 @@ https://www.tooplate.com/view/2097-pop
 
 */
 
-
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 19px;
   font-weight: 300;
   color: white;
+  background-image: url('https://wallpapercave.com/wp/wp3284839.gif');
   position: relative;
-  background-image: url(../img/pop-bg.jpg);
-}
-.tm-main-content{
-  background-color: #FF0000; 
-  margin: 5% 18% 5% 18%;
+  background-size:100% ;
 
-  box-shadow:
-  /* inset 0 0 50px rgb(0, 0, 0),
-  inset 20px 0 80px rgb(115, 255, 0),
-  inset -20px 0 80px #0ff,
-  inset 20px 0 300px #f0f,
-  inset -20px 0 300px #0ff, */
-  0 0 15px rgb(16, 99, 5),
-  -10px 0 40px rgb(226, 32, 226),
-  10px 0 40px #0ff;
- 
+ height: 100vh;
 }
+
+
 h1 {
   font-size: 2.8rem;
 }
-
+/* 
 #tm-bg {
+ 
+  background-image: url('https://i.pinimg.com/originals/82/5f/57/825f576e4a75cfb90d7bb5e93f00a7de.gif');
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
-
+border-radius: 50%;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+ 
   z-index: -1;
   transition: all 0.3s ease;
+
+  transition: all 0.3s ease;
+  animation: 40s example infinite linear;
 }
+@keyframes example {
+  100% {
+    /* background-position: 
+      -5000px 20%,
+      -800px 95%; 
+transform: rotate(360deg);
+    } 
+  } */
 
 #tm-bg:after {
   content: "";
@@ -326,9 +328,8 @@ p {
 
 /* Footer */
 footer {
-
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   text-align: center;
   left: 0;
   right: 0;
@@ -433,162 +434,3 @@ p:last-child {
     font-size: 2.2em;
   }
 }
-.title {
-  color:transparent;
-  background-image:linear-gradient(135deg, rgba(255, 0, 0, 0.747) 25%, transparent 25%,
-                  transparent 50%, rgba(221, 209, 34, 0.959) 50%, rgba(14, 28, 233, 0.918) 75%,
-                  transparent 75%, transparent);
-  background-size:50px 50px;
-  background-position:0% 0%;
-  -webkit-background-clip:text;
-  text-transform:uppercase;
-  line-height:90px;
-  font-size:120px;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: -6px;
-  font-weight:900;
-  animation: bg 3s infinite;
-
-  animation-direction: forwards;
-  animation-timing-function: linear;
-  position: relative;
-}
-.title:after {
-  background: none;
-  content: attr(data-text);
-  left: 0;
-  position: absolute;
-  text-shadow: 2px 2px 9px rgba(0, 0, 0, 0.33);
-  top: 0;
-  z-index: -1;
-  color:#00b7ea;
-  animation:color 10s infinite;
-  animation-timing-function: linear;
-}
-@keyframes bg {
-  from{ background-position:0% 0%;}
-  to { background-position:0% 115%;}
-}
-@keyframes color {
-  0% {
-    color:#FF0000;
-  }
-  15% {
-    color:#FF6A00;
-  }
-  30% {
-    color:#FFD900;
-  }
-  45% {
-    color:#55FF00;
-  }
-  60% {
-    color:#00D0FF;
-  }
-  75% {
-    color:#003CFF;
-  }
-  90% {
-    color:#EA00FF;
-  }
-  100% {
-    color:#FF0000;
-  }
-}
-
-.gradient-text {
-  /* Fallback: Set a background color. */
-  background-color: #CA4246;
-  
-  /* Create the gradient. */
-   background-image: linear-gradient(
-        45deg,
-        #CA4246 16.666%, 
-        #E16541 16.666%, 
-        #E16541 33.333%, 
-        #F18F43 33.333%, 
-        #F18F43 50%, 
-        #8B9862 50%, 
-        #8B9862 66.666%, 
-        #476098 66.666%, 
-        #476098 83.333%, 
-        #A7489B 83.333%);
-  
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-
-  /* Use the text as a mask for the background. */
-  /* This will show the gradient as a text color rather than element bg. */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  
-  /* Animate the text when loading the element. */
-    /* This animates it on page load and when hovering out. */
-    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
-
-}
-
-.gradient-text:hover{
-    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
-}
-
-
-/* Move the background and make it smaller. */
-/* Animation shown when entering the page and after the hover animation. */
-@keyframes rainbow-text-simple-animation-rev {
-    0% {
-        background-size: 650%;
-    }
-    40% {
-        background-size: 650%;
-    }
-    100% {
-        background-size: 100%;
-    }
-}
-
-/* Move the background and make it larger. */
-/* Animation shown when hovering over the text. */
-@keyframes rainbow-text-simple-animation {
-    0% {
-        background-size: 100%;
-    }
-    80% {
-        background-size: 650%;
-    }
-    100% {
-        background-size: 650%;
-    }
-}
-@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
-  &:after {
-    position: absolute;
-    content: "";
-    top: $y;
-    left: $x;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale($size);
-    -webkit-filter: blur($spread);
-    -moz-filter: blur($spread);
-    -ms-filter: blur($spread);
-    filter: blur($spread);
-    background: linear-gradient(270deg, $colorA, $colorB);
-    background-size: 200% 200%;
-    animation: animateGlow $duration ease infinite;
-    
-    @keyframes animateGlow {
-      0%{background-position:0% 50%}
-      50%{background-position:100% 50%}
-      100%{background-position:0% 50%}
-    }
-  }
-}
-
-
-
-  

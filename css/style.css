@@ -1,37 +1,52 @@
-html {
-    height: 100%;
-    /* max-height: 600px; */
-    width: 1000px;
-    background-color: hsla(200,40%,30%,.4);
-    background-image:       
-        url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
-        url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
-        url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
-        url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
-        url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
-    background-repeat: repeat-x;
-    background-position: 
-        0 20%,
-        0 100%,
-        0 50%,
-        0 100%,
-        0 0;
-    background-size: 
-        2500px,
-        800px,
-        500px 200px,
-        1000px,
-        400px 260px;
-    animation: 50s para infinite linear;
-    }
-
-@keyframes para {
+   
+  html{
+    width: 100px;
+    height: 100px;
+    background-image: url('https://wallpapercave.com/wp/wp2936849.jpg');
+    position:relative;
+    animation: example 4s linear infinite ;
+    
+  }
+  .content{
+    background-image: url(../img/dark.jpg);
+    width: max-content;
+    height: 100px;
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      overflow: initial;
+    } 
+  @keyframes example {
     100% {
-        background-position: 
-            -5000px 20%,
-            -800px 95%,
-            500px 50%,
-            1000px 100%,
-            400px 0;
-        }
+      transform:rotate(-360deg);
+      }
+ 
+      /* div { width:100px;
+         height:100px; 
+         margin-top:180px; 
+         transform-origin:200% center;
+          position:relative;
+           animation:rotate 3s linear infinite; }
+      div:before { 
+        content:''; 
+        position:absolute;
+         height:100%;
+          width:100%; 
+          background:blue; 
+          animation:rotate 3s linear reverse infinite; }
+      @keyframes rotate {
+         100% { 
+           transform:rotate(-360deg);
+           }
+           }
+      
+      body { background:rgb(20,20,20); } /* The best color ever */
+    /* html{ */
+      background: midnightblue;
     }
+    .header{
+      background-color:black;
+    } */
